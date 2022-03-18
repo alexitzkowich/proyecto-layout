@@ -1,0 +1,133 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+ul {
+  margin: 0;
+  padding-inline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behaviour: auto !important;
+  }
+}
+
+/* Variables */
+:root {
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, sans-serif;
+}
+
+/* Base */
+body {
+  font-family: var(--font-sans);
+}
+/* Layout */
+.menu {
+  height: 10vh;
+  background: rgb(71, 24, 158);
+  width: 100%;
+}
+
+.grid {
+  height: 100vh;
+  padding-block: 10px;
+  gap: 10px;
+
+  display: grid;
+  /* Aquí inicio 👇🏼 */
+  grid-template-columns: 1fr 0.7fr 0.3fr 1fr 1fr;
+  grid-template-rows: 1fr 0.2fr 0.8fr repeat(3, 1fr);
+}
+
+.grid div {
+  background: rgb(153, 151, 151);
+  border: 1px solid black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.grid div:nth-child(1) {
+  background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/01_jte7dv.jpg);
+  grid-row: 1 / span 3;
+}
+.grid div:nth-child(2) {
+  background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/02_oqswh1.jpg);
+}
+
+.grid div:nth-child(3) {
+  background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/03_fdyaqk.jpg);
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.grid div:nth-child(4) {
+  background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/04_mryv5s.jpg);
+  grid-row: 1 / span 2;
+}
+.grid div:nth-child(5) {
+  background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/05_bbvzw9.jpg);
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row: 2 / span 2;
+}
+.grid div:nth-child(6) {
+  background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/06_o6l71o.jpg);
+}
+.grid div:nth-child(7) {
+  background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/07_e2mosf.jpg);
+  grid-row: span 2;
+  grid-column: span 3;
+}
+.grid div:nth-child(8) {
+  background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/08_wro2oj.jpg);
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.grid div:nth-child(9) {
+  background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/09_qsmzr6.jpg);
+}
+.grid div:nth-child(10) {
+  background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/10_mzggpy.jpg);
+  grid-column: span 2;
+}
+.grid div:nth-child(11) {
+  background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/11_v5pwkc.jpg);
+  grid-column: span 2;
+}
